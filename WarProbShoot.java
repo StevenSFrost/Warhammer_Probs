@@ -27,16 +27,19 @@ public class WarProbShoot {
     return "Ranged";
   }
 
-  public double toHitProb (int wnd, int tot, int ws, int mod) {
-    double favorable = 0;
+  public static double toHitProb (int wnd, int tot, int ws, int mod) {
     double total = Math.pow(6, tot);
-    double chance = favorable / total;
-    return
+    double chance = toHitProbFav(wnd, tot, ws, mod) / total;
+    return chance;
   }
   public double round (double a) {
-    a *= 10;
+    a *= 1000;
     a = a (int);
-    a /= 10;
+    a /= 1000;
     return a;
+  }
+  private static double toHitProbFav(int wnd, int tot, int ws, int mod) {
+    double fav = 0;
+    return fav;
   }
 }
